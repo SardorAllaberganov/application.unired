@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muddatli to'lov kartasi">
+    <meta name="keywords" content="Unired, Universalbank, Unibank, Ubank, Muddatli to'lov, rassrochka">
+    <title>Unired - Заявка на карту </title>
+    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="data/fonts/stylesheet.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="data/js/index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container justify-content-center">
+            <div class="row justify-content-between w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="data/images/logo.svg" alt="">
+                </a>
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="data/images/uzbekistan-flag.svg" alt=""> <span>Uz</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><img src="data/images/uzbekistan-flag.svg" alt="">
+                            <span>Uz</span></a>
+                        <a class="dropdown-item" href="#"><img src="data/images/russia-flag.svg" alt="">
+                            <span>Ru</span></a>
+                        <a class="dropdown-item" href="#"><img src="data/images/united-kingdom-flag.svg" alt="">
+                            <span>En</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row mt-4 requirements">
+            <div class="col-12">
+                <h5>Kerakli shartlar</h5>
+                <ul>
+                    <li>kartangiz SMS-xabardor qilish xizmati orqali haqiqiy telefon raqamingizga biriktirilgan bo’lishi</li>
+                    <li>oxirgi 6 oy davomida kartadagi pul tushumi o’rtacha 1,2 mln. so’mdan kam bo’lmaganligi</li>
+                    <li>hisobda 35 ming so'mdan ortiq mablag' bo'lishi kerak</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="uni-card mt-5">
+                <div class="uni-card-title">
+                    <h4>Quyidagilarni to'ldiring</h4>
+                    <div class="uni-card-steps">
+                        <button onclick="location.href=''" class="active"><span>1</span></button>
+                        <button onclick="location.href=''" disabled><span>2</span></button>
+                        <button onclick="location.href=''" disabled><span>3</span></button>
+                    </div>
+                </div>
+                <div class="uni-card-body">
+                    <form action="">
+                        <div class="container-fluid">
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+
+                                    <div class="first-step">
+                                        <label for="passportID">Passport seriyasi</label>
+                                        <input type="text" id="passportID" class="inputs" maxlength="9">
+                                        <p class="error-message" id="passportID-error"></p>
+
+                                        <label for="phone-number" class="mt-3">Telefon raqami</label>
+                                        <input type="text" id="phone-number" class="inputs" maxlength="14">
+                                        <p class="error-message" id="phone-number-error">Month should be less than 12 or
+                                            more than 0</p>
+
+                                        <label for="pinfl" class="mt-3">Pinfl</label>
+                                        <input type="text" id="pinfl" class="inputs" maxlength="14">
+                                        <p class="error-message" id="pinfl-error">Month should be less than 12 or more
+                                            than 0</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="passport-img">
+                                        <img src="data/images/pass-img.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <hr />
+                                    <h6 class="subtitle">Pasportingiz skanerini yuklang (JPEG)*</h6>
+                                    <div class="logo-upload1">
+                                        <img id="imgshow1" alt="">
+                                        <input type="file" id="imgload1" hidden>
+                                        <label id="logo-label1" for="imgload1">Select image</label>
+                                        <span>Rasm tanlanmadi</span>
+                                        <span class="error-image-msg">Rasm jpeg formatida emas</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <hr />
+                                    <h6 class="subtitle">Pasportingiz propiska sahifasi skanerini yuklang (JPEG)*</h6>
+                                    <div class="logo-upload2">
+                                        <img id="imgshow2" alt="">
+                                        <input type="file" id="imgload2" hidden>
+                                        <label id="logo-label2" for="imgload2">Select image</label>
+                                        <span>Rasm tanlanmadi</span>
+                                        <span class="error-image-msg">Rasm jpeg formatida emas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-12 text-center">
+                                    <label class="agreement">
+                                        <input type="checkbox" id="agreement-confirm"> <span> Tasdiqlayman</span>
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+                                            Shartnoma
+                                        </button>
+                                    </label>
+
+                                    <button class="submit-btn" type="submit" disabled>Jo'natish</button>
+
+
+                                    <!-- The Modal -->
+                                    <div class="modal fade" id="myModal">
+                                        <div class="modal-dialog modal-xl">
+                                            <div class="modal-content">
+
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Публичная оферта</h4>
+                                                    <button type="button" class="close"
+                                                        data-dismiss="modal">&times;</button>
+                                                </div>
+
+                                                <!-- Modal body -->
+                                                <div class="modal-body">
+                                                    <div class="text-center">
+                                                        <div>
+                                                            <iframe src="data/unired-oferta.pdf#toolbar=0&embedded=true"
+                                                                style="width:100%; height: 70vh"
+                                                                frameborder="0"></iframe>
+                                                            <p>Скачать: <a href="data/unired-oferta.pdf"> ПУБЛИЧНАЯ
+                                                                    ОФЕРТА </a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <p>©2019 «Universalbank» ATB №68-sonli litsеnziya 14.07.2018-yilda bеrilgan</p>
+                    <p>O‘zR MB tomonidan 27.06.2015-y.da Xorijiy valyutada opеratsiyalarni amalga oshirish uchun
+                        №77-sonli bosh litsеnziya bеrilgan</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/telegram 1.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 order-1 order-sm-2 mb-4 mb-sm-0 phone-numbers">
+                    <p class="mb-1">Call center</p>
+                    <h5>+998 71 200-11-10</h5>
+
+                    <p class="mb-1">Ishonch telefoni ATB "Universalbank":</p>
+                    <h5>+998 78 150 39 90</h5>
+
+                    <p class="mb-1">O‘zR MB:</p>
+                    <h5>+998 71 200 00 44</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

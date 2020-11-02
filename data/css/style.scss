@@ -1,0 +1,451 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Gilroy";
+}
+
+.navbar{
+    background: #fff;
+    box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.15);
+}
+button, input{
+    outline: none!important;
+    box-shadow: none!important;
+}
+
+.dropdown{
+    &-menu{
+        width: max-content;
+        min-width: max-content;
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+    }
+    img{
+        width: 16px;
+        margin-right: 5px;
+    }
+}
+
+.input-group {
+    position: relative;
+    margin: 40px 0 20px;
+
+    input {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #999;
+    }
+
+    input:focus {
+        outline: none;
+    }
+    label {
+        color: #999;
+        font-size: 18px;
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 15px;
+        top: 10px;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+        span{
+            color: inherit
+        }
+    }
+
+    input:focus + label {
+        top: -7px;
+        font-size: 14px;
+        color: #e20001;
+        padding: 0 3px;
+        background: #fff;
+        span{
+            color: #000;
+        }
+    }
+}
+
+.uni-card{
+    width: 100%;
+    &-title{
+        text-align: center;
+        h4{
+            font-size: 1.5em;
+            margin-bottom: 50px;
+        }
+    }
+    &-body{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-image, &-inputs{
+        position: relative;
+        margin: 10px;
+        height: 250px;
+        width: 100%;
+    }
+    &-inputs, .first-step{
+        input{
+            width: 100%;
+            border: 1px solid transparent;
+            background: #eee;
+            padding: 10px 15px;
+        }
+        .error-message{
+            color: #e20001;
+            margin-top: 10px;
+            display: none;
+        }
+    }
+    &-image{
+        position: relative;
+        img{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        #cardHolderName{
+            position: absolute;
+            z-index: 2;
+            top: 33%;
+            left: 30%;
+            font-size: 1.3em;
+            color: #fff;
+        }
+        #cardNumberLabel{
+            position: absolute;
+            z-index: 2;
+            top: 55%;
+            color: #fff;
+            font-size: 1.5em;
+            left: 16%;
+        }
+        #expiresLabel{
+            position: absolute;
+            z-index: 2;
+            top: 70%;
+            color: #fff;
+            font-size: 1.1em;
+            left: 16%;
+        }
+    }
+    &-steps{
+        width: 70%;
+        margin: 30px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &::after{
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            content: "";
+            height: 1px;
+            background: #e20001;
+        }
+        button{
+            z-index: 2;
+            font-size: 1.5em;
+            border-radius: 50%;
+            border: 1px solid #e20001;
+            height: 50px;
+            width: 50px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #0B2A49;
+            &.active{
+                background-color: #e20001;
+                color: #fff;
+            }
+        }
+    }
+    
+}
+
+.logo-upload1, .logo-upload2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    label {
+        transition: all 0.2s;
+        border: 1px solid #333;
+        padding: 10px;
+        &:hover {
+            color: #fff;
+            background-color: #e20001;
+            border-color: #e20001;
+        }
+    }
+    span {
+        margin-left: 15px;
+        color: #e20001;
+    }
+}
+
+.error-image-msg{
+    display: none;
+}
+
+#imgshow1, #imgshow2 {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-right: 15px;
+}
+
+.subtitle{
+    margin-bottom: 20px;
+}
+
+.submit-btn{
+    background: #e20001;
+    color: #fff;
+    padding: 8px 20px;
+    border: 1px solid #e20001;
+    transition: all .3s;
+    &:hover{
+        background: #fff;
+        color: #e20001;
+    }
+    &:disabled{
+        background: darken($color: #e20001, $amount: 15%);
+        border-color: darken($color: #e20001, $amount: 15%);
+    }
+    &:disabled:hover{
+        background: darken($color: #e20001, $amount: 15%);
+        color: #fff;
+        border-color: darken($color: #e20001, $amount: 15%)
+    }
+}
+
+.passport-img{
+    padding: 10px;
+    img{
+        width: 100%;
+    }
+}
+
+.agreement{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0B2A49;
+    button{
+        font-weight: bold;
+        color: #e20001;
+    }
+    span{
+        margin-left: 5px;
+        font-weight: bold;
+        -webkit-user-select: none;  /* Chrome all / Safari all */
+        -moz-user-select: none;     /* Firefox all */
+        -ms-user-select: none;      /* IE 10+ */
+        user-select: none;          /* Likely future */
+    }
+}
+
+.modal{
+    padding: 0!important;
+    &-xl{
+        max-width: 90%;
+    }
+    &-content{
+        border-radius: 0;
+    }
+    &-header{
+        border-radius: 0;
+        background: #e20001;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+    &-title{
+        color: #fff;
+    }
+    .close{
+        color: #fff;
+        opacity: 1;
+        margin: 0 10px;
+        padding: 0;
+    }
+    &-body{
+        a{
+            text-decoration: none;
+            color: #e20001;
+            font-weight: bold;
+            &:hover{
+                color: darken($color: #e20001, $amount: 15%);
+            }
+        }
+    }
+}
+
+.footer {
+    border-top: 1px solid #ccc;
+    padding: 30px 0;
+    .phone-numbers {
+        h5 {
+            font-weight: 600;
+        }
+    }
+    .social-icons {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: max-content;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            border: 1px solid transparent;
+            width: 30px;
+            height: 30px;
+            padding-bottom: 2px;
+            border-radius: 50%;
+            transition: all 0.2s;
+            &:hover {
+                border: 1px solid #0b2a49;
+            }
+        }
+        img {
+            width: 20px;
+        }
+    }
+}
+
+#passportID{
+    text-transform: uppercase;
+}
+
+.requirements{
+    h5{
+        color: #e20001;
+        font-weight: bold;
+    }
+    ul{
+        margin: 0;
+        padding-left: 0px;
+        list-style: none;
+        li{
+            position: relative;
+            &:before{
+                content: "-";
+                text-indent: -10px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .uni-card-image, .uni-card-inputs{
+        margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .uni-card-image, .uni-card-inputs{
+        margin: 10px 0;
+    }
+}
+
+
+#cardfront{
+    width: 100%;
+    height: 100%;
+}
+
+
+#svgname {
+    text-transform: uppercase;
+}
+
+#cardfront .st2 {
+    fill: #FFFFFF;
+}
+
+#cardfront .st3 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+}
+
+#cardfront .st4 {
+    font-size: 54.7817px;
+}
+
+#cardfront .st5 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#cardfront .st6 {
+    font-size: 33.1112px;
+}
+
+#cardfront .st7 {
+    opacity: 0.6;
+    fill: #FFFFFF;
+}
+
+#cardfront .st8 {
+    font-size: 24px;
+}
+
+#cardfront .st9 {
+    font-size: 36.5498px;
+}
+
+#cardfront .st10 {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 300;
+}
+
+#cardfront .st11 {
+    font-size: 16.1716px;
+}
+
+#cardfront .st12 {
+    fill: #4C4C4C;
+}
+
+.lightcolor{
+    fill: #aaa;
+}
+
+.greydark{
+    fill: #777;
+}
+
+#CardBackground rect{
+    width: 100%;
+    height: 100%;
+}
+
+#CardBackground .cardLogo{
+    x: 550px;
+    y: 0px;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muddatli to'lov kartasi">
+    <meta name="keywords" content="Unired, Universalbank, Unibank, Ubank, Muddatli to'lov, rassrochka">
+    <title>Unired - Заявка на карту </title>
+    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="data/fonts/stylesheet.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="data/js/index.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container justify-content-center">
+            <div class="row justify-content-between w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="data/images/logo.svg" alt="">
+                </a>
+                <div class="dropdown">
+                    <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img src="data/images/uzbekistan-flag.svg" alt=""> <span>Uz</span>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><img src="data/images/uzbekistan-flag.svg" alt=""> <span>Uz</span></a>
+                        <a class="dropdown-item" href="#"><img src="data/images/russia-flag.svg" alt=""> <span>Ru</span></a>
+                        <a class="dropdown-item" href="#"><img src="data/images/united-kingdom-flag.svg" alt=""> <span>En</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row mb-5">
+            <div class="uni-card mt-5">
+                <div class="uni-card-title">
+                    <h4>Quyidagilarni to'ldiring</h4>
+                    <div class="uni-card-steps">
+                        <button onclick="location.href=''" class="active"><span>1</span></button>
+                        <button onclick="location.href=''" class="active"><span>2</span></button>
+                        <button onclick="location.href=''" disabled><span>3</span></button>
+                    </div>
+                </div>
+                <h5 class="text-center my-4">Plastik kartani kiritish</h5>
+                <div class="uni-card-body">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <div class="uni-card-image">
+                                    <!-- <img src="data/images/default-card.png" class="card-back" alt="">
+                                    <h6 id="cardHolderName">Card holder name</h6>
+                                    <h6 id="cardNumberLabel">0000 0000 0000 0000</h6>
+                                    <h6 id="expiresLabel">00/00</h6> -->
+
+
+                                    <svg version="1.1" id="cardfront" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 750 471"
+                                        xml:space="preserve">
+                                        <g id="Front">
+                                            <g id="CardBackground">
+                                                <g id="default">
+                                                    <g id="Page-1_1_">
+                                                        <g id="amex_1_">
+                                                            <path id="Rectangle-1_1_" class="lightcolor grey" d="M40,0h670c22.1,0,40,17.9,40,40v391c0,22.1-17.9,40-40,40H40c-22.1,0-40-17.9-40-40V40 C0,17.9,17.9,0,40,0z" />
+                                                        </g>
+                                                    </g>
+                                                    <path class="darkcolor greydark"
+                                                        d="M750,431V193.2c-217.6-57.5-556.4-13.5-750,24.9V431c0,22.1,17.9,40,40,40h670C732.1,471,750,453.1,750,431z" />
+                                                </g>
+                                            </g>
+                                            <text transform="matrix(1 0 0 1 60.106 295.0121)" id="svgnumber"
+                                                class="st2 st3 st4">0123 4567 8910 1112</text>
+                                            <text transform="matrix(1 0 0 1 54.1064 428.1723)" id="svgname"
+                                                class="st2 st5 st6">JOHN DOE</text>
+                                            <text transform="matrix(1 0 0 1 54.1074 389.8793)"
+                                                class="st7 st5 st8">cardholder name</text>
+                                            <text transform="matrix(1 0 0 1 479.7754 388.8793)"
+                                                class="st7 st5 st8">expiration</text>
+                                            <text transform="matrix(1 0 0 1 65.1054 241.5)" class="st7 st5 st8">card
+                                                number</text>
+                                            <g>
+                                                <text transform="matrix(1 0 0 1 574.4219 433.8095)" id="svgexpire"
+                                                    class="st2 st5 st9">01/23</text>
+                                                <text transform="matrix(1 0 0 1 479.3848 417.0097)"
+                                                    class="st2 st10 st11">VALID</text>
+                                                <text transform="matrix(1 0 0 1 479.3848 435.6762)"
+                                                    class="st2 st10 st11">THRU</text>
+                                                <polygon class="st2" points="554.5,421 540.4,414.2 540.4,427.9 		" />
+                                            </g>
+                                            <g id="cchip">
+                                                <g>
+                                                    <path class="st2" d="M168.1,143.6H82.9c-10.2,0-18.5-8.3-18.5-18.5V74.9c0-10.2,8.3-18.5,18.5-18.5h85.3
+                                        c10.2,0,18.5,8.3,18.5,18.5v50.2C186.6,135.3,178.3,143.6,168.1,143.6z" />
+                                                </g>
+                                                <g>
+                                                    <g>
+                                                        <rect x="82" y="70" class="st12" width="1.5" height="60" />
+                                                    </g>
+                                                    <g>
+                                                        <rect x="167.4" y="70" class="st12" width="1.5" height="60" />
+                                                    </g>
+                                                    <g>
+                                                        <path class="st12" d="M125.5,130.8c-10.2,0-18.5-8.3-18.5-18.5c0-4.6,1.7-8.9,4.7-12.3c-3-3.4-4.7-7.7-4.7-12.3
+                                            c0-10.2,8.3-18.5,18.5-18.5s18.5,8.3,18.5,18.5c0,4.6-1.7,8.9-4.7,12.3c3,3.4,4.7,7.7,4.7,12.3
+                                            C143.9,122.5,135.7,130.8,125.5,130.8z M125.5,70.8c-9.3,0-16.9,7.6-16.9,16.9c0,4.4,1.7,8.6,4.8,11.8l0.5,0.5l-0.5,0.5
+                                            c-3.1,3.2-4.8,7.4-4.8,11.8c0,9.3,7.6,16.9,16.9,16.9s16.9-7.6,16.9-16.9c0-4.4-1.7-8.6-4.8-11.8l-0.5-0.5l0.5-0.5
+                                            c3.1-3.2,4.8-7.4,4.8-11.8C142.4,78.4,134.8,70.8,125.5,70.8z" />
+                                                    </g>
+                                                    <g>
+                                                        <rect x="82.8" y="82.1" class="st12" width="25.8"
+                                                            height="1.5" />
+                                                    </g>
+                                                    <g>
+                                                        <rect x="82.8" y="117.9" class="st12" width="26.1"
+                                                            height="1.5" />
+                                                    </g>
+                                                    <g>
+                                                        <rect x="142.4" y="82.1" class="st12" width="25.8"
+                                                            height="1.5" />
+                                                    </g>
+                                                    <g>
+                                                        <rect x="142" y="117.9" class="st12" width="26.2"
+                                                            height="1.5" />
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="uni-card-inputs">
+                                    <form action="">
+                                        <label for="cardNumber">Karta raqamini kiriting</label>
+                                        <input type="text" id="cardNumber" class="inputs" maxlength="19">
+                                        <p class="error-message" id="card-error">Enter only Humo card or Uzcard</p>
+                                        <label for="expireDate" class="mt-3">Amal qilish muddati</label>
+                                        <input type="text" id="expireDate" class="inputs" maxlength="5">
+                                        <p class="error-message" id="expire-error">Month should be less than 12 or more
+                                            than 0</p>
+                                            
+                                        <div class="d-flex mt-3 justify-content-between">
+                                            <button type="submit" class="btn">Ortga</button>
+                                            <button type="submit" class="submit-btn">Tekshirish</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <p>©2019 «Universalbank» ATB №68-sonli litsеnziya 14.07.2018-yilda bеrilgan</p>
+                    <p>O‘zR MB tomonidan 27.06.2015-y.da Xorijiy valyutada opеratsiyalarni amalga oshirish uchun
+                        №77-sonli bosh litsеnziya bеrilgan</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/telegram 1.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 order-1 order-sm-2 mb-4 mb-sm-0 phone-numbers">
+                    <p class="mb-1">Call center</p>
+                    <h5>+998 71 200-11-10</h5>
+
+                    <p class="mb-1">Ishonch telefoni ATB "Universalbank":</p>
+                    <h5>+998 78 150 39 90</h5>
+
+                    <p class="mb-1">O‘zR MB:</p>
+                    <h5>+998 71 200 00 44</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
