@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Examples. Determining the address of a click on the map using reverse geocoding</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--
+        Set your own API-key. Testing key is not valid for other web-sites and services.
+        Get your API-key on the Developer Dashboard: https://developer.tech.yandex.ru/keys/
+    -->
+
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=en_Ru&amp;apikey=dfeec039-6ceb-4428-8c4e-e970c6a7fcc8" type="text/javascript"></script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_Ru&amp;apikey=d2ef8134-2f26-45ad-b285-4233107f8820"
+        type="text/javascript"></script>
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var myPlacemark1,
+                myMap1 = new ymaps.Map('map', {
+                    center: [41.2948337, 69.2800393],
+                    zoom: 14
+                }, {
+                    searchControlProvider: 'yandex#search'
+                });
+
+            var myPlacemark2,
+                myMap2 = new ymaps.Map('map1', {
+                    center: [41.2948337, 69.2800393],
+                    zoom: 14
+                }, {
+                    searchControlProvider: 'yandex#search'
+                });
+
+            // Listening for a click on the map
+            myMap1.events.add('click', function (e) {
+                var coords = e.get('coords');
+                var address = document.getElementById("address");
+
+                // Moving the placemark if it was already created
+                if (myPlacemark1) {
+                    myPlacemark1.geometry.setCoordinates(coords);
+                }
+                // Otherwise, creating it.
+                else {
+                    myPlacemark1 = createPlacemark(coords);
+                    myMap1.geoObjects.add(myPlacemark1);
+                    // Listening for the dragging end event on the placemark.
+                    myPlacemark1.events.add('dragend', function () {
+                        getAddress1(myPlacemark1.geometry.getCoordinates());
+                    });
+                }
+                getAddress1(coords);
+            });
+
+            myMap2.events.add('click', function (e) {
+                var coords = e.get('coords');
+                var address = document.getElementById("address");
+
+                // Moving the placemark if it was already created
+                if (myPlacemark2) {
+                    myPlacemark2.geometry.setCoordinates(coords);
+                }
+                // Otherwise, creating it.
+                else {
+                    myPlacemark2 = createPlacemark(coords);
+                    myMap2.geoObjects.add(myPlacemark2);
+                    // Listening for the dragging end event on the placemark.
+                    myPlacemark2.events.add('dragend', function () {
+                        getAddress2(myPlacemark2.geometry.getCoordinates());
+                    });
+                }
+                getAddress2(coords);
+            });
+
+            // Creating a placemark
+            function createPlacemark(coords) {
+                return new ymaps.Placemark(coords, {
+                    iconCaption: 'searching...'
+                }, {
+                    preset: 'islands#violetDotIconWithCaption',
+                    draggable: true
+                });
+            }
+
+            // Determining the address by coordinates (reverse geocoding).
+            function getAddress1(coords) {
+                myPlacemark1.properties.set('iconCaption', 'searching...');
+                ymaps.geocode(coords).then(function (res) {
+                    var firstGeoObject = res.geoObjects.get(0);
+                    address.value = firstGeoObject.getAddressLine();
+                    myPlacemark1.properties
+                        .set({
+                            // Forming a string with the object's data.
+                            iconCaption: [
+                                // The name of the municipality or the higher territorial-administrative formation.
+                                firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+                                // Getting the path to the toponym; if the method returns null, then requesting the name of the building.
+                                firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+                            ].filter(Boolean).join(', '),
+                            // Specifying a string with the address of the object as the balloon content.
+                            balloonContent: firstGeoObject.getAddressLine()
+                        });
+                });
+            }
+
+            // Determining the address by coordinates (reverse geocoding).
+            function getAddress2(coords) {
+                myPlacemark2.properties.set('iconCaption', 'searching...');
+                ymaps.geocode(coords).then(function (res) {
+                    var firstGeoObject = res.geoObjects.get(0);
+                    address.value = firstGeoObject.getAddressLine();
+                    myPlacemark2.properties
+                        .set({
+                            // Forming a string with the object's data.
+                            iconCaption: [
+                                // The name of the municipality or the higher territorial-administrative formation.
+                                firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+                                // Getting the path to the toponym; if the method returns null, then requesting the name of the building.
+                                firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+                            ].filter(Boolean).join(', '),
+                            // Specifying a string with the address of the object as the balloon content.
+                            balloonContent: firstGeoObject.getAddressLine()
+                        });
+                });
+            }
+        }
+
+    </script>
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            font-size: 14px;
+        }
+
+        #map,
+        #map1 {
+            width: 100%;
+            height: 80%;
+        }
+
+
+        .header {
+            padding: 5px;
+        }
+
+        input {
+            width: 99%
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="address">
+    <!-- <input type="text" id="address2"> -->
+    <p class="header">Click on the map to get the address</p>
+    <div id="map"></div>
+    <div id="map1"></div>
+</body>
+
+</html>

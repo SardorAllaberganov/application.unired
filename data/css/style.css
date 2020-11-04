@@ -18,7 +18,36 @@ body {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-button, input {
+.navbar-nav .nav-link {
+  color: #0b2a49;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #e20001;
+}
+
+#dropdownMenuButton {
+  padding-left: 0 !important;
+}
+
+.navbar-toggler .hamburger {
+  display: block;
+  height: 3px;
+  width: 24px;
+  background-color: #e20001;
+  margin: 4px 0;
+  border-radius: 2px;
+  border: none;
+}
+
+.navbar-toggler:hover .hamburger {
+  background-color: #af0001;
+}
+
+button,
+input {
   outline: none !important;
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -118,18 +147,19 @@ button, input {
 .uni-card-image, .uni-card-inputs {
   position: relative;
   margin: 10px;
-  height: 250px;
   width: 100%;
 }
 
-.uni-card-inputs input, .uni-card .first-step input {
+.uni-card-inputs input,
+.uni-card .first-step input {
   width: 100%;
   border: 1px solid transparent;
   background: #eee;
   padding: 10px 15px;
 }
 
-.uni-card-inputs .error-message, .uni-card .first-step .error-message {
+.uni-card-inputs .error-message,
+.uni-card .first-step .error-message {
   color: #e20001;
   margin-top: 10px;
   display: none;
@@ -217,7 +247,7 @@ button, input {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  color: #0B2A49;
+  color: #0b2a49;
 }
 
 .uni-card-steps button.active {
@@ -225,7 +255,8 @@ button, input {
   color: #fff;
 }
 
-.logo-upload1, .logo-upload2 {
+.logo-upload1,
+.logo-upload2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,20 +267,23 @@ button, input {
       flex-wrap: wrap;
 }
 
-.logo-upload1 label, .logo-upload2 label {
+.logo-upload1 label,
+.logo-upload2 label {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   border: 1px solid #333;
   padding: 10px;
 }
 
-.logo-upload1 label:hover, .logo-upload2 label:hover {
+.logo-upload1 label:hover,
+.logo-upload2 label:hover {
   color: #fff;
   background-color: #e20001;
   border-color: #e20001;
 }
 
-.logo-upload1 span, .logo-upload2 span {
+.logo-upload1 span,
+.logo-upload2 span {
   margin-left: 15px;
   color: #e20001;
 }
@@ -258,7 +292,47 @@ button, input {
   display: none;
 }
 
-#imgshow1, #imgshow2 {
+.bold {
+  font-weight: bold;
+}
+
+.inn-class {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inn-class button, .inn-class a {
+  text-decoration: none;
+  color: #e20001;
+  border: none;
+  background: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.inn-class button:hover, .inn-class a:hover {
+  color: #0b2a49;
+}
+
+.inn-class svg:hover path {
+  fill: #0b2a49;
+}
+
+.card p {
+  color: #0b2a49;
+  font-size: 1.1em;
+}
+
+.card p span {
+  font-weight: bold;
+}
+
+#imgshow1,
+#imgshow2 {
   width: 100px;
   height: 100px;
   -o-object-fit: contain;
@@ -277,13 +351,13 @@ button, input {
   color: #fff;
   padding: 8px 20px;
   border: 1px solid #e20001;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .submit-btn:hover {
-  background: #fff;
-  color: #e20001;
+  background: #960001;
+  color: #fff;
 }
 
 .submit-btn:disabled {
@@ -315,7 +389,7 @@ button, input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #0B2A49;
+  color: #0b2a49;
 }
 
 .agreement button {
@@ -457,14 +531,99 @@ button, input {
   margin-right: 5px;
 }
 
+.radio-cards1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-cards1 label {
+  width: calc(50% - 10px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.radio-cards1 label:hover {
+  cursor: pointer;
+  color: #e20001;
+}
+
+.radio-cards1-inner {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 0.9em;
+}
+
+.radio-cards1 input {
+  display: none;
+}
+
+.radio-cards1-input:checked + .radio-cards1-inner {
+  -webkit-box-shadow: 0 0 1px 1px #e20001;
+          box-shadow: 0 0 1px 1px #e20001;
+  color: #e20001;
+}
+
+.select-option {
+  width: 100%;
+  border: 1px solid transparent;
+  background: #eee;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.map {
+  width: 100%;
+  height: 80vh;
+}
+
+#myModal2 .modal-body, #myModal1 .modal-body {
+  padding: 0;
+}
+
+#myModal2 .close, #myModal1 .close {
+  font-size: 40px;
+}
+
+.btns {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 20px;
+  border: 1px solid #e20001;
+  padding: 8px 20px;
+}
+
+#sms-conf {
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.sms-confirmation {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
-  .uni-card-image, .uni-card-inputs {
+  .uni-card-image,
+  .uni-card-inputs {
     margin: 10px 0;
   }
 }
 
 @media only screen and (max-width: 576px) {
-  .uni-card-image, .uni-card-inputs {
+  .uni-card-image,
+  .uni-card-inputs {
+    margin: 10px 0;
+  }
+  .btns {
+    width: 100%;
     margin: 10px 0;
   }
 }
@@ -479,11 +638,11 @@ button, input {
 }
 
 #cardfront .st2 {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 #cardfront .st3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 600;
 }
 
@@ -492,7 +651,7 @@ button, input {
 }
 
 #cardfront .st5 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
@@ -502,7 +661,7 @@ button, input {
 
 #cardfront .st7 {
   opacity: 0.6;
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 #cardfront .st8 {
@@ -514,7 +673,7 @@ button, input {
 }
 
 #cardfront .st10 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 300;
 }
 
@@ -523,7 +682,7 @@ button, input {
 }
 
 #cardfront .st12 {
-  fill: #4C4C4C;
+  fill: #4c4c4c;
 }
 
 .lightcolor {

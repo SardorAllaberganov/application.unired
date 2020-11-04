@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muddatli to'lov kartasi">
+    <meta name="keywords" content="Unired, Universalbank, Unibank, Ubank, Muddatli to'lov, rassrochka">
+    <title>Unired - Заявка на карту </title>
+    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="data/fonts/stylesheet.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="data/js/index.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPQZTP23C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0BPQZTP23C');
+    </script>
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(68965828, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/68965828" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container justify-content-center">
+            <div class="row justify-content-between w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="data/images/logo.svg" alt="">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bosh sahifa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown ml-auto">
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="data/images/uzbekistan-flag.svg" alt=""> <span>Uz</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><img src="data/images/uzbekistan-flag.svg" alt=""><span>Uz</span></a>
+                            <a class="dropdown-item" href="#"><img src="data/images/russia-flag.svg" alt=""><span>Ru</span></a>
+                            <a class="dropdown-item" href="#"><img src="data/images/united-kingdom-flag.svg" alt=""><span>En</span></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row mb-5">
+            <div class="uni-card mt-5">
+                <div class="uni-card-title">
+                    <h4>Scoring natijalari</h4>
+                    <div class="uni-card-steps">
+                        <button onclick="location.href=''" class="active"><span>1</span></button>
+                        <button onclick="location.href=''" class="active d-none"><span>1.2</span></button>
+                        <button onclick="location.href=''" class="active"><span>2</span></button>
+                        <button onclick="location.href=''" class="active" disabled><span>3</span></button>
+                    </div>
+                </div>
+                <div class="scoring-info">
+                    <h5 class="text-center my-4">Tabriklaymiz! Arizangiz ma'qullandi</h5>
+                    <div class="uni-card-body">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-10">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p> <b>Scoring</b> dan o'tdingiz. Scoring natijasiga ko'ra, sizning o'rtacha
+                                                oyligingiz <span class="appl-approved-sum">3 300 000</span> so'm va siz
+                                                <span class="appl-approved-sum">9 000 000</span> so'm limit bilan
+                                                tavsiya etildingiz.</p>
+                                            <hr>
+                                            <p>Limit sizga ma'qul bo'lsa <b>tasdiqlash</b> tugmasini bosing yoki bekor
+                                                qilishgiz kerak!</p>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="text-center">
+                                                <button class="btn btns">Bekor qilish</button>
+                                                <button class="btn btns submit-btn" id="confirm">Tasdiqlaymay</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sms-confirmation">
+                    <h5 class="text-center my-4">SMS tasdiqlash kodi jo'natildi.</h5>
+                    <div class="uni-card-inputs">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-6">
+                                    <form action="" class="text-center">
+                                        <label class="inn-class"><span>SMS kodni kiriting</span> <a href="">Qayta
+                                                jo'natish</a></label>
+                                        <input type="text" id="sms-conf" autofocus class="inputs" maxlength="6"
+                                            placeholder="_ _ _ _ _ _">
+                                        <p class="error-message" id="sms-conf-error">Kiritilgan SMS kodi xato</p>
+                                        <p class="mt-5 mb-1 text-center bold">SMS yuborilgan raqam</p>
+                                        <p class="text-center bold">+998 97 *** ** 28</p>
+                                        <button type="submit" class="submit-btn mt-1">Jo'natish</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <p>©2019 «Universalbank» ATB №68-sonli litsеnziya 14.07.2018-yilda bеrilgan</p>
+                    <p>O‘zR MB tomonidan 27.06.2015-y.da Xorijiy valyutada opеratsiyalarni amalga oshirish uchun
+                        №77-sonli bosh litsеnziya bеrilgan</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/telegram 1.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 order-1 order-sm-2 mb-4 mb-sm-0 phone-numbers">
+                    <p class="mb-1">Call center</p>
+                    <h5>+998 71 200-11-10</h5>
+
+                    <p class="mb-1">Ishonch telefoni ATB "Universalbank":</p>
+                    <h5>+998 78 150 39 90</h5>
+
+                    <p class="mb-1">O‘zR MB:</p>
+                    <h5>+998 71 200 00 44</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

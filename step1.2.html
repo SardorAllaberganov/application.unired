@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Muddatli to'lov kartasi">
+    <meta name="keywords" content="Unired, Universalbank, Unibank, Ubank, Muddatli to'lov, rassrochka">
+    <title>Unired - Заявка на карту </title>
+    <link rel="shortcut icon" href="data/images/icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="data/fonts/stylesheet.css">
+    <link rel="stylesheet" href="data/css/style.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="data/js/index.js"></script>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPQZTP23C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0BPQZTP23C');
+    </script>
+
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(68965828, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/68965828" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container justify-content-center">
+            <div class="row justify-content-between w-100">
+                <a class="navbar-brand" href="#">
+                    <img src="data/images/logo.svg" alt="">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bosh sahifa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FAQ</a>
+                        </li>
+                    </ul>
+                    <div class="dropdown ml-auto">
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="data/images/uzbekistan-flag.svg" alt=""> <span>Uz</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#"><img src="data/images/uzbekistan-flag.svg"
+                                    alt=""><span>Uz</span></a>
+                            <a class="dropdown-item" href="#"><img src="data/images/russia-flag.svg"
+                                    alt=""><span>Ru</span></a>
+                            <a class="dropdown-item" href="#"><img src="data/images/united-kingdom-flag.svg"
+                                    alt=""><span>En</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="uni-card mt-5">
+                <div class="uni-card-title">
+                    <h4>Quyidagilarni to'ldiring</h4>
+                    <div class="uni-card-steps">
+                        <button onclick="location.href=''" class="active d-none"><span>1</span></button>
+                        <button onclick="location.href=''" class="active"><span>1.2</span></button>
+                        <button onclick="location.href=''" disabled><span>2</span></button>
+                        <button onclick="location.href=''" disabled><span>3</span></button>
+                    </div>
+                </div>
+                <div class="uni-card-body">
+                    <form action="" class="uni-card-inputs">
+                        <div class="container-fluid">
+                            <div class="row personal-info">
+                                <div class="col-md-6">
+                                    <label>Familyangiz </label>
+                                    <input type="text" class="inputs">
+                                    <p class="error-message only-latin-error">Lotin harflar bilan kiriting</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ismingiz </label>
+                                    <input type="text" class="inputs">
+                                    <p class="error-message only-latin-error">Lotin harflar bilan kiriting</p>
+                                </div>
+
+                            </div>
+                            <div class="row personal-info mt-3">
+                                <div class="col-md-6">
+                                    <label>Otangizni ismi </label>
+                                    <input type="text" class="inputs">
+                                    <p class="error-message only-latin-error">Lotin harflar bilan kiriting</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Tug'ilgan sanangiz </label>
+                                    <input type="text" class="inputs" id="DoB" maxlength="10">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <label for="passportID">Passport seriyasi</label>
+                                    <input type="text" id="passportID" class="inputs" maxlength="9">
+                                    <p class="error-message" id="passportID-error"></p>
+
+                                    <label for="pinfl" class="mt-3">Pinfl</label>
+                                    <input type="text" id="pinfl" class="inputs" maxlength="14">
+                                    <p class="error-message" id="pinfl-error">Month should be less than 12 or more
+                                        than 0</p>
+
+                                    <label for="inn" class="mt-3 inn-class"><span>STIR </span><a href=""> STIR
+                                            bilish</a></label>
+                                    <input type="text" id="inn" class="inputs" maxlength="9">
+                                    <p class="error-message" id="inn-error">Month should be less than 12 or more
+                                        than 0</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="data/images/pass-img.svg" class="w-100 mt-4" alt="">
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Passport berilgan sana </label>
+                                    <input type="text" class="inputs" id="passport-issued" maxlength="10">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Jins </label>
+                                    <div class="radio-cards1">
+                                        <label style="margin-right: 20px;">
+                                            <input type="radio" checked name="gender" placeholder="some"
+                                                class="radio-cards1-input">
+                                            <div class="radio-cards1-inner">
+                                                Erkak
+                                            </div>
+                                        </label>
+
+                                        <label>
+                                            <input type="radio" name="gender" placeholder="some"
+                                                class="radio-cards1-input">
+                                            <div class="radio-cards1-inner">
+                                                Ayol
+                                            </div>
+                                        </label>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label>Viloyatlar</label>
+                                    <select name="" class="select-option">
+                                        <option value="">Toshkent shahri</option>
+                                        <option value="">Toshkent viloyati</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Tumanlar</label>
+                                    <select name="" class="select-option">
+                                        <option value="">Toshkent tumani</option>
+                                        <option value="">Toshkent viloyati</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label class="mt-3 inn-class"><span>Yashash joyi (passport bo'yicha)</span>
+                                        <button type="button" data-toggle="modal" data-target="#myModal1">
+                                            <svg width="16" height="16" viewBox="0 0 50 50" fill="currentColor"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                    <path
+                                                        d="M45.1074 0C44.5478 0 43.9756 0.107422 43.4092 0.34375L2.80664 19.083C-1.87792 21.2695 -0.316401 28.1406 4.68067 28.1406H21.8594V45.3193C21.8594 48.25 24.2236 50 26.6191 50C28.3086 50 30.0127 49.1309 30.917 47.1934L49.6572 6.58984C50.9824 3.40723 48.2558 0 45.1074 0ZM46.8213 5.28125L28.0859 45.873C27.7754 46.5391 27.2812 46.877 26.6182 46.877C26.0518 46.877 24.9814 46.5518 24.9814 45.3203V25.0176H4.68067C3.5625 25.0176 3.25098 24.1553 3.16797 23.7842C3.06055 23.3027 3.04395 22.4189 4.11524 21.9189L44.6113 3.22656C44.7783 3.15723 44.9404 3.12402 45.1084 3.12402C45.6377 3.12402 46.2305 3.48047 46.584 4.01074C46.7978 4.33203 47.0058 4.83203 46.8213 5.28125Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0">
+                                                        <rect width="50" height="50" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <input type="text" class="inputs" id="address-pass">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="mt-3 inn-class">
+                                        <span>Yashash joyi (hozirgi kunda)</span>
+                                        <button type="button" data-toggle="modal" data-target="#myModal2">
+                                            <svg width="16" height="16" viewBox="0 0 50 50" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0)">
+                                                    <path
+                                                        d="M45.1074 0C44.5478 0 43.9756 0.107422 43.4092 0.34375L2.80664 19.083C-1.87792 21.2695 -0.316401 28.1406 4.68067 28.1406H21.8594V45.3193C21.8594 48.25 24.2236 50 26.6191 50C28.3086 50 30.0127 49.1309 30.917 47.1934L49.6572 6.58984C50.9824 3.40723 48.2558 0 45.1074 0ZM46.8213 5.28125L28.0859 45.873C27.7754 46.5391 27.2812 46.877 26.6182 46.877C26.0518 46.877 24.9814 46.5518 24.9814 45.3203V25.0176H4.68067C3.5625 25.0176 3.25098 24.1553 3.16797 23.7842C3.06055 23.3027 3.04395 22.4189 4.11524 21.9189L44.6113 3.22656C44.7783 3.15723 44.9404 3.12402 45.1084 3.12402C45.6377 3.12402 46.2305 3.48047 46.584 4.01074C46.7978 4.33203 47.0058 4.83203 46.8213 5.28125Z"
+                                                        fill="currentColor" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0">
+                                                        <rect width="50" height="50" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </button>
+                                    </label>
+                                    <input type="text" class="inputs" id="address-now">
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-12 text-center">
+                                    <button class="btn btns">Ortga</button>
+                                    <button class="btn btns submit-btn">Jo'natish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <p>©2019 «Universalbank» ATB №68-sonli litsеnziya 14.07.2018-yilda bеrilgan</p>
+                    <p>O‘zR MB tomonidan 27.06.2015-y.da Xorijiy valyutada opеratsiyalarni amalga oshirish uchun
+                        №77-sonli bosh litsеnziya bеrilgan</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="data/images/icons/telegram 1.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 order-1 order-sm-2 mb-4 mb-sm-0 phone-numbers">
+                    <p class="mb-1">Call center</p>
+                    <h5>+998 71 200-11-10</h5>
+
+                    <p class="mb-1">Ishonch telefoni ATB "Universalbank":</p>
+                    <h5>+998 78 150 39 90</h5>
+
+                    <p class="mb-1">O‘zR MB:</p>
+                    <h5>+998 71 200 00 44</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Yashash joyi (passport bo'yicha)</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="map" class="map"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Yashash joyi (hozirgi kunda)</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="map1" class="map"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_Ru&amp;apikey=d2ef8134-2f26-45ad-b285-4233107f8820"
+        type="text/javascript"></script>
+    <script src="data/js/yandex-map.js"></script>
+
+</body>
+
+</html>

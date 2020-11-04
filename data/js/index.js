@@ -123,13 +123,13 @@ $(document).ready(function () {
         var key = e.which || e.charCode || e.keyCode || 0;
         var value = $(this).val();
         if (key !== 8 && key !== 9) {
-            if(value.length < 2){
-                if(key < 65 || key > 90){
+            if (value.length < 2) {
+                if (key < 65 || key > 90) {
                     e.preventDefault();
                 }
             }
-            if(value.length > 1){
-                if(key < 48 || key > 57){
+            if (value.length > 1) {
+                if (key < 48 || key > 57) {
                     e.preventDefault();
                 }
             }
@@ -265,4 +265,60 @@ $(document).ready(function () {
             $(".submit-btn").attr("disabled", true);
         }
     });
+
+    $(".personal-info input").keyup(function () {
+        var reg = new RegExp(/^[a-zA-Z]+$/);
+        if (!reg.test($(this).val())) {
+            $(this).siblings(".error-message").show();
+        } else {
+            $(this).siblings(".error-message").hide();
+        }
+    });
+
+    $("#DoB, #passport-issued").keydown(function (e) {
+        var key = e.which || e.charCode || e.keyCode || 0;
+        var value = $(this).val();
+        if (key !== 8 && key !== 9) {
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            } else {
+                if($(this).val().length === 2){
+                    $(this).val($(this).val() + ".")
+                }
+                if($(this).val().length === 5){
+                    $(this).val($(this).val() + ".")
+                }
+                // if ($(this).val() > 0 && $(this).val() < 32) {
+                // } else {
+                    
+                // }
+            }
+        }
+    });
+
+    $("#inn").keydown(function (e) {
+        var key = e.which || e.charCode || e.keyCode || 0;
+        if (key !== 8 && key !== 9) {
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            }
+        }
+    })
+
+    $("#sms-conf").keydown(function (e) {
+        var key = e.which || e.charCode || e.keyCode || 0;
+        if (key !== 8 && key !== 9) {
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            }
+            else{
+                    
+            }
+        }
+    })
+
+    $("#confirm").click(function (){
+        $('.scoring-info').hide();
+        $('.sms-confirmation').show();
+    })
 });
