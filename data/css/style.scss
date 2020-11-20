@@ -112,7 +112,8 @@ input {
         text-align: center;
         h4 {
             font-size: 1.5em;
-            margin-bottom: 50px;
+            margin-bottom: 30px;
+            font-weight: 600;
         }
     }
     &-body {
@@ -133,10 +134,9 @@ input {
             background: #eee;
             padding: 10px 15px;
         }
-        .error-message {
+        .error {
             color: #e20001;
             margin-top: 10px;
-            display: none;
         }
     }
     &-image {
@@ -175,7 +175,7 @@ input {
     }
     &-steps {
         width: 70%;
-        margin: 30px auto;
+        margin: 5px auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -267,10 +267,9 @@ input {
 
 #imgshow1,
 #imgshow2 {
-    width: 100px;
+    width: auto;
     height: 100px;
     object-fit: contain;
-    border-radius: 50%;
     border: 1px solid #ccc;
     margin-right: 15px;
 }

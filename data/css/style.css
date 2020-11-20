@@ -133,7 +133,8 @@ input {
 
 .uni-card-title h4 {
   font-size: 1.5em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .uni-card-body {
@@ -158,11 +159,10 @@ input {
   padding: 10px 15px;
 }
 
-.uni-card-inputs .error-message,
-.uni-card .first-step .error-message {
+.uni-card-inputs .error,
+.uni-card .first-step .error {
   color: #e20001;
   margin-top: 10px;
-  display: none;
 }
 
 .uni-card-image {
@@ -207,7 +207,7 @@ input {
 
 .uni-card-steps {
   width: 70%;
-  margin: 30px auto;
+  margin: 5px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,11 +333,10 @@ input {
 
 #imgshow1,
 #imgshow2 {
-  width: 100px;
+  width: auto;
   height: 100px;
   -o-object-fit: contain;
      object-fit: contain;
-  border-radius: 50%;
   border: 1px solid #ccc;
   margin-right: 15px;
 }

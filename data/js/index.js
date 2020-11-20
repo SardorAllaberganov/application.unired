@@ -121,7 +121,8 @@ $(document).ready(function () {
 
     $("#passportID").on("keydown", function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
-        var value = $(this).val();
+        var value = $(this).val().toUpperCase();
+        console.log(value)
         if (key !== 8 && key !== 9) {
             if (value.length < 2) {
                 if (key < 65 || key > 90) {
@@ -288,10 +289,6 @@ $(document).ready(function () {
                 if($(this).val().length === 5){
                     $(this).val($(this).val() + ".")
                 }
-                // if ($(this).val() > 0 && $(this).val() < 32) {
-                // } else {
-                    
-                // }
             }
         }
     });

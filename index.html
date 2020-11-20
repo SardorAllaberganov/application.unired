@@ -99,7 +99,7 @@
 
     <div class="container">
         <div class="row mt-4 requirements">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h5>Kerakli shartlar</h5>
                 <ul>
                     <li>kartangiz SMS-xabardor qilish xizmati orqali haqiqiy telefon raqamingizga biriktirilgan bo’lishi
@@ -110,7 +110,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="uni-card mt-5">
+            <div class="uni-card mt-3">
                 <div class="uni-card-title">
                     <h4>Quyidagilarni to'ldiring</h4>
                     <div class="uni-card-steps">
@@ -121,33 +121,41 @@
                     </div>
                 </div>
                 <div class="uni-card-body">
-                    <form action="">
+                    <form action="" style="width: 100%;">
                         <div class="container-fluid">
                             <div class="row mt-3">
-                                <div class="col-md-6">
-
+                                <div class="col-md-12">
                                     <div class="first-step">
-                                        <label for="passportID">Passport seriyasi</label>
-                                        <input type="text" id="passportID" class="inputs" maxlength="9">
-                                        <p class="error-message" id="passportID-error"></p>
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="passportID" class="mt-3">Passport seriyasi</label>
+                                                <input type="text" id="passportID" class="inputs" maxlength="9">
+                                                <p class="error">error</p>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="phone-number" class="mt-3">Telefon raqami</label>
+                                                <input type="text" id="phone-number" class="inputs" maxlength="14">
+                                                <p class="error">Month should be less
+                                                    than 12 or
+                                                    more than 0</p>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <label for="pinfl" class="mt-3">Pinfl</label>
+                                                <input type="text" id="pinfl" class="inputs" maxlength="14">
+                                                <p class="error">Month should be less than 12
+                                                    or more
+                                                    than 0</p>
+                                            </div>
+                                        </div>
 
-                                        <label for="phone-number" class="mt-3">Telefon raqami</label>
-                                        <input type="text" id="phone-number" class="inputs" maxlength="14">
-                                        <p class="error-message" id="phone-number-error">Month should be less than 12 or
-                                            more than 0</p>
-
-                                        <label for="pinfl" class="mt-3">Pinfl</label>
-                                        <input type="text" id="pinfl" class="inputs" maxlength="14">
-                                        <p class="error-message" id="pinfl-error">Month should be less than 12 or more
-                                            than 0</p>
                                     </div>
                                 </div>
 
-                                <div class="col-md-6">
+                                <!-- <div class="col-md-6">
                                     <div class="passport-img">
                                         <img src="data/images/pass-img.svg" alt="">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-6">
@@ -155,7 +163,7 @@
                                     <h6 class="subtitle">Pasportingiz skanerini yuklang (JPEG)*</h6>
                                     <div class="logo-upload1">
                                         <img id="imgshow1" alt="">
-                                        <input type="file" id="imgload1" hidden>
+                                        <input type="file" id="imgload1" accept=".jpg, .jpeg" hidden>
                                         <label id="logo-label1" for="imgload1">Select image</label>
                                         <span>Rasm tanlanmadi</span>
                                         <span class="error-image-msg">Rasm jpeg formatida emas</span>
@@ -165,8 +173,8 @@
                                     <hr />
                                     <h6 class="subtitle">Pasportingiz propiska sahifasi skanerini yuklang (JPEG)*</h6>
                                     <div class="logo-upload2">
-                                        <img id="imgshow2" alt="">
-                                        <input type="file" id="imgload2" hidden>
+                                        <img id="imgshow2" alt="" >
+                                        <input type="file" id="imgload2" accept=".jpg, .jpeg" hidden>
                                         <label id="logo-label2" for="imgload2">Select image</label>
                                         <span>Rasm tanlanmadi</span>
                                         <span class="error-image-msg">Rasm jpeg formatida emas</span>
