@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="data/fonts/stylesheet.css">
+    <link rel="stylesheet" href="data/css/mdb.min.css">
     <link rel="stylesheet" href="data/css/style.css">
 
     <!-- jQuery library -->
@@ -19,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="data/js/mdb.min.js"></script>
 
     <script src="data/js/index.js"></script>
 
@@ -120,6 +122,15 @@
                         <button onclick="location.href=''" disabled><span>3</span></button>
                     </div>
                 </div>
+                <div class="row my-5 card-error">
+                    <div class="col-10 offset-1">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit veritatis vel cumque quia saepe, similique pariatur.</p> <button id="close">&times;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="uni-card-body">
                     <form action="" style="width: 100%;">
                         <div class="container-fluid">
@@ -128,23 +139,47 @@
                                     <div class="first-step">
                                         <div class="row">
                                             <div class="col-sm-4">
-                                                <label for="passportID" class="mt-3">Passport seriyasi</label>
+                                                <!-- <label for="passportID" class="mt-3">Passport seriyasi</label>
                                                 <input type="text" id="passportID" class="inputs" maxlength="9">
-                                                <p class="error">error</p>
+                                                <p class="error">error</p> -->
+
+                                                <!-- Outline validation input -->
+                                                <div class="md-form md-outline">
+                                                    <input type="text" id="passportID"
+                                                        class="form-control validate form-control-lg">
+                                                    <label for="passportID" data-error="wrong"
+                                                        data-success="right">Passport seriyasi</label>
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <label for="phone-number" class="mt-3">Telefon raqami</label>
+                                                <!-- <label for="phone-number" class="mt-3">Telefon raqami</label>
                                                 <input type="text" id="phone-number" class="inputs" maxlength="14">
                                                 <p class="error">Month should be less
                                                     than 12 or
-                                                    more than 0</p>
+                                                    more than 0</p> -->
+
+                                                <!-- Outline validation input -->
+                                                <div class="md-form md-outline">
+                                                    <input type="text" id="phone-number"
+                                                        class="form-control validate form-control-lg">
+                                                    <label for="phone-number" data-error="wrong"
+                                                        data-success="right">Telefon raqami</label>
+                                                </div>
                                             </div>
                                             <div class="col-sm-4">
-                                                <label for="pinfl" class="mt-3">Pinfl</label>
+                                                <!-- <label for="pinfl" class="mt-3">Pinfl</label>
                                                 <input type="text" id="pinfl" class="inputs" maxlength="14">
                                                 <p class="error">Month should be less than 12
                                                     or more
-                                                    than 0</p>
+                                                    than 0</p> -->
+
+                                                <!-- Outline validation input -->
+                                                <div class="md-form md-outline">
+                                                    <input type="text" id="pinfl"
+                                                        class="form-control validate form-control-lg">
+                                                    <label for="pinfl" data-error="wrong"
+                                                        data-success="right">Pinfl</label>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -173,7 +208,7 @@
                                     <hr />
                                     <h6 class="subtitle">Pasportingiz propiska sahifasi skanerini yuklang (JPEG)*</h6>
                                     <div class="logo-upload2">
-                                        <img id="imgshow2" alt="" >
+                                        <img id="imgshow2" alt="">
                                         <input type="file" id="imgload2" accept=".jpg, .jpeg" hidden>
                                         <label id="logo-label2" for="imgload2">Select image</label>
                                         <span>Rasm tanlanmadi</span>
@@ -185,7 +220,7 @@
                                 <div class="col-12 text-center">
                                     <label class="agreement">
                                         <input type="checkbox" id="agreement-confirm"> <span> Tasdiqlayman</span>
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
+                                        <button type="button" class="btn p-0" data-toggle="modal" data-target="#myModal">
                                             Shartnoma
                                         </button>
                                     </label>

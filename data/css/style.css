@@ -151,14 +151,6 @@ input {
   width: 100%;
 }
 
-.uni-card-inputs input,
-.uni-card .first-step input {
-  width: 100%;
-  border: 1px solid transparent;
-  background: #eee;
-  padding: 10px 15px;
-}
-
 .uni-card-inputs .error,
 .uni-card .first-step .error {
   color: #e20001;
@@ -253,6 +245,46 @@ input {
 .uni-card-steps button.active {
   background-color: #e20001;
   color: #fff;
+}
+
+.card-error .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.card-error p {
+  margin: 0;
+}
+
+.card-error #close {
+  border: none;
+  background: none;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.md-form.md-outline input[type="text"]:focus:not([readonly]) {
+  border-color: #0b2a49;
+}
+
+.md-form.md-outline input[type="text"]:focus:not([readonly]) + label {
+  color: #0b2a49;
 }
 
 .logo-upload1,
@@ -505,10 +537,6 @@ input {
   width: 20px;
 }
 
-#passportID {
-  text-transform: uppercase;
-}
-
 .requirements h5 {
   color: #e20001;
   font-weight: bold;
@@ -522,6 +550,7 @@ input {
 
 .requirements ul li {
   position: relative;
+  font-weight: 500;
 }
 
 .requirements ul li:before {

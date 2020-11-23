@@ -128,12 +128,12 @@ input {
     }
     &-inputs,
     .first-step {
-        input {
-            width: 100%;
-            border: 1px solid transparent;
-            background: #eee;
-            padding: 10px 15px;
-        }
+        // input {
+        //     width: 100%;
+        //     border: 1px solid transparent;
+        //     background: #eee;
+        //     padding: 10px 15px;
+        // }
         .error {
             color: #e20001;
             margin-top: 10px;
@@ -207,6 +207,35 @@ input {
             }
         }
     }
+}
+
+.card-error{
+    .card-body{
+        display: flex;
+        align-items: flex-start;
+    }
+    p{
+        margin: 0;
+    }
+    #close{
+        border: none;
+        background: none;
+        font-size: 2em;
+        padding: 0;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.md-form.md-outline input[type="text"]:focus:not([readonly]){
+    border-color: #0b2a49;
+}
+.md-form.md-outline input[type="text"]:focus:not([readonly])+label{
+    color: #0b2a49;
 }
 
 .logo-upload1,
@@ -396,9 +425,9 @@ input {
     }
 }
 
-#passportID {
-    text-transform: uppercase;
-}
+// #passportID {
+//     text-transform: uppercase;
+// }
 
 .requirements {
     h5 {
@@ -411,6 +440,7 @@ input {
         list-style: none;
         li {
             position: relative;
+            font-weight: 500;
             &:before {
                 content: "-";
                 text-indent: -10px;

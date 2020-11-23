@@ -117,95 +117,95 @@ $(document).ready(function () {
         }
     });
 
-    var regex = new RegExp("^[a-zA-Z]{2}[0-9]{7}$");
+    // var regex = new RegExp("^[a-zA-Z]{2}[0-9]{7}$");
 
-    $("#passportID").on("keydown", function (e) {
-        var key = e.which || e.charCode || e.keyCode || 0;
-        var value = $(this).val().toUpperCase();
-        console.log(value)
-        if (key !== 8 && key !== 9) {
-            if (value.length < 2) {
-                if (key < 65 || key > 90) {
-                    e.preventDefault();
-                }
-            }
-            if (value.length > 1) {
-                if (key < 48 || key > 57) {
-                    e.preventDefault();
-                }
-            }
-        }
-    });
+    // $("#passportID").on("keydown", function (e) {
+    //     var key = e.which || e.charCode || e.keyCode || 0;
+    //     var value = $(this).val().toUpperCase();
+    //     console.log(value);
+    //     if (key !== 8 && key !== 9) {
+    //         if (value.length < 2) {
+    //             if (key < 65 || key > 90) {
+    //                 e.preventDefault();
+    //             }
+    //         }
+    //         if (value.length > 1) {
+    //             if (key < 48 || key > 57) {
+    //                 e.preventDefault();
+    //             }
+    //         }
+    //     }
+    // });
 
-    $("#pinfl").keypress(function (e) {
-        e.stopImmediatePropagation();
+    // $("#pinfl").keypress(function (e) {
+    //     e.stopImmediatePropagation();
 
-        var key = e.which || e.charCode || e.keyCode || 0;
+    //     var key = e.which || e.charCode || e.keyCode || 0;
 
-        if (e.charCode < 48 || e.charCode > 57) {
-            return false;
-        }
-    });
+    //     if (e.charCode < 48 || e.charCode > 57) {
+    //         return false;
+    //     }
+    // });
 
-    $("#phone-number")
-        .keydown(function (e) {
-            var key = e.which || e.charCode || e.keyCode || 0;
-            $phone = $(this);
+    // $("#phone-number")
+    //     .keydown(function (e) {
+    //         var key = e.which || e.charCode || e.keyCode || 0;
+    //         $phone = $(this);
 
-            // Don't let them remove the starting '('
-            if ($phone.val().length === 1 && (key === 8 || key === 46)) {
-                $phone.val("(");
-                return false;
-            }
-            // Reset if they highlight and type over first char.
-            else if ($phone.val().charAt(0) !== "(") {
-                $phone.val("(" + String.fromCharCode(e.keyCode) + "");
-            }
+    //         // Don't let them remove the starting '('
+    //         if ($phone.val().length === 1 && (key === 8 || key === 46)) {
+    //             $phone.val("(");
+    //             return false;
+    //         }
+    //         // Reset if they highlight and type over first char.
+    //         else if ($phone.val().charAt(0) !== "(") {
+    //             $phone.val("(" + String.fromCharCode(e.keyCode) + "");
+    //         }
 
-            // Auto-format- do not expose the mask as the user begins to type
-            if (key !== 8 && key !== 9) {
-                if ($phone.val().length === 3) {
-                    $phone.val($phone.val() + ")");
-                }
-                if ($phone.val().length === 4) {
-                    $phone.val($phone.val() + " ");
-                }
-                if ($phone.val().length === 8) {
-                    $phone.val($phone.val() + "-");
-                }
-                if ($phone.val().length === 11) {
-                    $phone.val($phone.val() + "-");
-                }
-            }
+    //         // Auto-format- do not expose the mask as the user begins to type
+    //         if (key !== 8 && key !== 9) {
+    //             if ($phone.val().length === 3) {
+    //                 $phone.val($phone.val() + ")");
+    //             }
+    //             if ($phone.val().length === 4) {
+    //                 $phone.val($phone.val() + " ");
+    //             }
+    //             if ($phone.val().length === 8) {
+    //                 $phone.val($phone.val() + "-");
+    //             }
+    //             if ($phone.val().length === 11) {
+    //                 $phone.val($phone.val() + "-");
+    //             }
+    //         }
 
-            // Allow numeric (and tab, backspace, delete) keys only
-            return (
-                key == 8 ||
-                key == 9 ||
-                key == 46 ||
-                (key >= 48 && key <= 57) ||
-                (key >= 96 && key <= 105)
-            );
-        })
+    //         // Allow numeric (and tab, backspace, delete) keys only
+    //         return (
+    //             key == 8 ||
+    //             key == 9 ||
+    //             key == 46 ||
+    //             (key >= 48 && key <= 57) ||
+    //             (key >= 96 && key <= 105)
+    //         );
+    //     })
 
-        .bind("focus click", function () {
-            $phone = $(this);
+    //     .bind("focus click", function () {
+    //         $phone = $(this);
 
-            if ($phone.val().length === 0) {
-                $phone.val("(");
-            } else {
-                var val = $phone.val();
-                $phone.val("").val(val); // Ensure cursor remains at the end
-            }
-        })
+    //         if ($phone.val().length === 0) {
+    //             $phone.val("(");
+    //         } else {
+    //             var val = $phone.val();
+    //             $phone.val("").val(val); // Ensure cursor remains at the end
+    //         }
+    //     })
 
-        .blur(function () {
-            $phone = $(this);
+    //     .blur(function () {
+    //         $phone = $(this);
 
-            if ($phone.val() === "(") {
-                $phone.val("");
-            }
-        });
+    //         if ($phone.val() === "(") {
+    //             $phone.val("");
+    //         }
+    //     });
 });
 
 $(document).ready(function () {
@@ -259,6 +259,10 @@ $(document).ready(function () {
         }
     });
 
+    $("#close").click(function(){
+        $(".card-error").hide(100)
+    })
+
     $("#agreement-confirm").click(function () {
         if ($("#agreement-confirm").is(":checked")) {
             $(".submit-btn").attr("disabled", false);
@@ -283,11 +287,11 @@ $(document).ready(function () {
             if (key < 48 || key > 57) {
                 e.preventDefault();
             } else {
-                if($(this).val().length === 2){
-                    $(this).val($(this).val() + ".")
+                if ($(this).val().length === 2) {
+                    $(this).val($(this).val() + ".");
                 }
-                if($(this).val().length === 5){
-                    $(this).val($(this).val() + ".")
+                if ($(this).val().length === 5) {
+                    $(this).val($(this).val() + ".");
                 }
             }
         }
@@ -300,22 +304,20 @@ $(document).ready(function () {
                 e.preventDefault();
             }
         }
-    })
+    });
 
     $("#sms-conf").keydown(function (e) {
         var key = e.which || e.charCode || e.keyCode || 0;
         if (key !== 8 && key !== 9) {
             if (key < 48 || key > 57) {
                 e.preventDefault();
-            }
-            else{
-                    
+            } else {
             }
         }
-    })
+    });
 
-    $("#confirm").click(function (){
-        $('.scoring-info').hide();
-        $('.sms-confirmation').show();
-    })
+    $("#confirm").click(function () {
+        $(".scoring-info").hide();
+        $(".sms-confirmation").show();
+    });
 });
