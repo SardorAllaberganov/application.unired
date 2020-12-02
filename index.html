@@ -122,17 +122,19 @@
                         <button onclick="location.href=''" disabled><span>3</span></button>
                     </div>
                 </div>
-                <div class="row my-5 card-error">
-                    <div class="col-10 offset-1">
-                        <div class="card">
-                            <div class="card-body">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit veritatis vel cumque quia saepe, similique pariatur.</p> <button id="close">&times;</button>
+                <div class="container">
+                    <div class="row my-5 card-error">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit veritatis vel cumque quia saepe, similique pariatur.</p> <button id="close">&times;</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="uni-card-body">
-                    <form action="" style="width: 100%;">
+                    <form action="" style="width: 100%;" autocomplete="off">
                         <div class="container-fluid">
                             <div class="row mt-3">
                                 <div class="col-md-12">
@@ -146,9 +148,12 @@
                                                 <!-- Outline validation input -->
                                                 <div class="md-form md-outline">
                                                     <input type="text" id="passportID"
-                                                        class="form-control validate form-control-lg">
+                                                    class="form-control validate form-control-lg">
                                                     <label for="passportID" data-error="wrong"
-                                                        data-success="right">Passport seriyasi</label>
+                                                    data-success="right">Passport seriyasi</label>
+                                                </div>
+                                                <div class="pass-img" id="pass-series">
+                                                    <img src="data/images/pass-img.svg" class="w-100" alt="">
                                                 </div>
                                             </div>
                                             <div class="col-sm-4">
@@ -180,6 +185,10 @@
                                                     <label for="pinfl" data-error="wrong"
                                                         data-success="right">Pinfl</label>
                                                 </div>
+                                                <div class="pass-img" id="pass-pinfl">
+                                                    <img src="data/images/pass-img-pinfl.svg" class="w-100" alt="">
+                                                </div>
+
                                             </div>
                                         </div>
 
@@ -244,9 +253,10 @@
                                                 <div class="modal-body">
                                                     <div class="text-center">
                                                         <div>
-                                                            <iframe src="data/unired-oferta.pdf#toolbar=0&embedded=true"
+                                                            <!-- <iframe src="data/unired-oferta.pdf#toolbar=0&embedded=true"
                                                                 style="width:100%; height: 70vh"
-                                                                frameborder="0"></iframe>
+                                                                frameborder="0"></iframe> -->
+                                                                <iframe src="data/unired-oferta.pdf#view=FitH&#toolbar=0&embedded=true" style="width:100%; height: 70vh;"></iframe>
                                                             <p>Скачать: <a href="data/unired-oferta.pdf"> ПУБЛИЧНАЯ
                                                                     ОФЕРТА </a></p>
                                                         </div>

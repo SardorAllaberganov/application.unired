@@ -441,11 +441,11 @@ input {
         li {
             position: relative;
             font-weight: 500;
-            &:before {
-                content: "-";
-                text-indent: -10px;
-                margin-right: 5px;
-            }
+            // &:before {
+            //     content: "-";
+            //     text-indent: -10px;
+            //     margin-right: 5px;
+            // }
         }
     }
 }
@@ -607,4 +607,17 @@ input {
 #CardBackground .cardLogo {
     x: 550px;
     y: 0px;
+}
+
+.pass-img{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -260px;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: #fff;
+    width: 100%;
+    height: max-content;
 }

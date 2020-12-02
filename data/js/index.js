@@ -320,4 +320,17 @@ $(document).ready(function () {
         $(".scoring-info").hide();
         $(".sms-confirmation").show();
     });
+
+    $('#passportID').on("focus", function(){
+        $('#pass-series').show(300);
+    })
+    $('#pinfl').on("focus", function(){
+        $('#pass-pinfl').show(300);
+    })
+    $('#passportID').on("focusout", function(){
+        $('#pass-series').hide(300);
+    })
+    $('#pinfl').on("focusout", function(){
+        $('#pass-pinfl').hide(300);
+    })
 });

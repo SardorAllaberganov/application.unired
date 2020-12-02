@@ -553,12 +553,6 @@ input {
   font-weight: 500;
 }
 
-.requirements ul li:before {
-  content: "-";
-  text-indent: -10px;
-  margin-right: 5px;
-}
-
 .radio-cards1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -729,5 +723,20 @@ input {
 #CardBackground .cardLogo {
   x: 550px;
   y: 0px;
+}
+
+.pass-img {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: -260px;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 /*# sourceMappingURL=style.css.map */
